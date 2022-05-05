@@ -103,7 +103,8 @@ def histFitterNominal( sample, tnpBin, tnpWorkspaceParam ):
 
     ## setup
     fitter.useMinos()
-    rootfile = rt.TFile(sample.nominalFit,'update')
+    rootpath = sample.nominalFit.replace('.root', '-%s.root' % tnpBin['name'])
+    rootfile = rt.TFile(rootpath,'update')
     fitter.setOutputFile( rootfile )
     
     ## generated Z LineShape
@@ -164,7 +165,8 @@ def histFitterAltSig( sample, tnpBin, tnpWorkspaceParam ):
     infile.Close()
 
     ## setup
-    rootfile = rt.TFile(sample.altSigFit,'update')
+    rootpath = sample.altSigFit.replace('.root', '-%s.root' % tnpBin['name'])
+    rootfile = rt.TFile(rootpath,'update')
     fitter.setOutputFile( rootfile )
     
     ## generated Z LineShape
@@ -212,7 +214,8 @@ def histFitterAltBkg( sample, tnpBin, tnpWorkspaceParam ):
     infile.Close()
 
     ## setup
-    rootfile = rt.TFile(sample.altBkgFit,'update')
+    rootpath = sample.altBkgFit.replace('.root', '-%s.root' % tnpBin['name'])
+    rootfile = rt.TFile(rootpath,'update')
     fitter.setOutputFile( rootfile )
 #    fitter.setFitRange(65,115)
 

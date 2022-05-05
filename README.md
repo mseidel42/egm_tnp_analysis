@@ -5,9 +5,9 @@
 This code can in principle run on your laptop but you need ROOT 6.10 or higher and RooFit installed to use some advanced features when creating histograms.
 The easiest thing to do is to set the environement in a 10_1_X release:
 
->cmsrel CMSSW_10_1_1
+>cmsrel CMSSW_11_2_0
 
->cd CMSSW_10_1_1/src
+>cd CMSSW_11_2_0/src
 
 >cmsenv
 
